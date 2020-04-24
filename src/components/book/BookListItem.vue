@@ -61,7 +61,11 @@ export default {
   },
   methods: {
     onLikeClick: async function() {
-      if (!this.book.favourites.includes(this.currentUser)) {
+      if (
+        !this.book.favourites.includes(this.currentUser) &&
+        !this.book.reading.includes(this.currentUser) &&
+        !this.book.wantRead.includes(this.currentUser)
+      ) {
         let bookfavourites = this.book.favourites;
         bookfavourites.push(this.currentUser);
         var batch = db.batch();
@@ -75,9 +79,19 @@ export default {
         batch.commit();
       } else {
         let bookfavourites = this.book.favourites;
+        let bookReading = this.book.reading;
+        let bookWant = this.book.wantRead;
         const index = bookfavourites.indexOf(this.currentUser);
+        const readingIndex = bookReading.indexOf(this.currentUser);
+        const wantIndex = bookWant.indexOf(this.currentUser);
         if (index > -1) {
           bookfavourites.splice(index, 1);
+        }
+        if (readingIndex > -1) {
+          bookReading.splice(readingIndex, 1);
+        }
+        if (wantIndex > -1) {
+          bookWant.splice(wantIndex, 1);
         }
         var batch = db.batch();
         var querySnapshot = await db
@@ -85,7 +99,11 @@ export default {
           .where("title", "==", this.book.title)
           .get();
         querySnapshot.forEach(function(doc) {
-          batch.update(doc.ref, { favourites: bookfavourites });
+          batch.update(doc.ref, {
+            favourites: bookfavourites,
+            reading: bookReading,
+            wantRead: bookWant
+          });
         });
         batch.commit();
       }
@@ -93,7 +111,11 @@ export default {
   },
   computed: {
     dynamic() {
-      return this.book.favourites.includes(this.currentUser) ? "red" : "grey";
+      return this.book.favourites.includes(this.currentUser) ||
+        this.book.reading.includes(this.currentUser) ||
+        this.book.wantRead.includes(this.currentUser)
+        ? "red"
+        : "grey";
     }
   }
 };
