@@ -57,7 +57,7 @@
         <v-col>
           <v-expansion-panel>
             <v-expansion-panel style="textAlign: center; ">
-              <v-expansion-panel-header style="textAlign: center; fontSize: 20px">
+              <v-expansion-panel-header style="textAlign:   center; fontSize: 20px">
                 <v-icon color="red" style="textDecoration: none; boxShadow: none">mdi-book</v-icon>
                 <h5>bookshelf</h5>
               </v-expansion-panel-header>
@@ -169,6 +169,7 @@ export default {
   },
   components: {},
   created() {
+    window.scrollTo(0, 0);
     if (firebase.auth().currentUser) {
       this.currentUser = firebase.auth().currentUser.email;
     }

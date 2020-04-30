@@ -1,5 +1,5 @@
 <template>
-  <div class="offset-2">
+  <div class="offset-2" style="margin-top: 30px">
     <v-flex
       xs12
       md4
@@ -49,6 +49,7 @@ export default {
     };
   },
   created() {
+    window.scrollTo(0, 0);
     db.collection("books")
       .where("genre", "==", this.$route.params.genre)
       .get()

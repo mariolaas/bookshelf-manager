@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="margin-top: 30px">
     <v-flex sm12 md12>
       <div>
         <v-flex align-center justify-center v-for="book in books" :key="book.id">
@@ -28,6 +28,9 @@ export default {
   },
   props: {
     books: Array
+  },
+  created() {
+    window.scrollTo(0, 0);
   }
 };
 </script>

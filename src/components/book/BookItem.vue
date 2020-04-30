@@ -1,5 +1,5 @@
 <template>
-  <v-container v-if="book != null">
+  <v-container v-if="book != null" style="margin-top: 30px">
     <v-row>
       <v-col md="2"></v-col>
       <v-col md="8">
@@ -158,6 +158,7 @@ export default {
     }
   },
   created() {
+    window.scrollTo(0, 0);
     if (firebase.auth().currentUser) {
       this.isLoggedIn = true;
       this.currentUser = firebase.auth().currentUser.email;
@@ -175,6 +176,7 @@ export default {
 
     db.collection("comments")
       .where("bookId", "==", this.$route.params.bookId)
+      .orderBy("date", "desc")
       .onSnapshot(
         snapshot => {
           const documents = snapshot.docs.map(doc => {

@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="margin-top: 30px">
     <v-flex sm12 md12>
       <div>
         <v-form>
@@ -44,6 +44,8 @@ export default {
     BookListItem
   },
   created() {
+    window.scrollTo(0, 0);
+
     if (firebase.auth().currentUser) {
       this.currentUser = firebase.auth().currentUser.email;
     }

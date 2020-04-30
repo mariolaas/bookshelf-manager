@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="margin-top: 30px">
     <v-layout row wrap>
       <v-flex xs2 sm6 offset-sm3 align-center justify-center>
         <v-card class="elevation-12">
@@ -134,12 +134,15 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:8081/api/book/all")
+      .get("https://nameless-citadel-95241.herokuapp.com/api/book/all")
       .then(response => (this.books = response.data));
 
     axios
-      .get("http://localhost:8081/api/book/titles")
+      .get("https://nameless-citadel-95241.herokuapp.com/api/book/titles")
       .then(response => (this.titles = response.data));
+  },
+  created() {
+    window.scrollTo(0, 0);
   },
   methods: {
     onChangeTitle() {

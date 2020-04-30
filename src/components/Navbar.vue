@@ -1,25 +1,28 @@
-
 <template>
-  <div style="height: 70px">
-    <v-app id="app">
-      <v-navigation-drawer v-model="drawer" app>
-        <v-list dense>
+  <div id="navigation">
+     <div id="app">
+  
+        <v-navigation-drawer v-model="drawer" app>
+             <v-list dense>
           <v-list-item link to="/books" @click="drawer = false">
-            <v-list-item-action>
-              <v-icon>mdi-book</v-icon>
+              <v-list-item-action>
+              <v-icon>fa-book</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title style="fontSize: 16px">All Books  </v-list-item-title>
+              <v-list-item-title style="fontSize: 16px"
+                >All Books
+              </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item link to="/add" @click="drawer = false">
             <v-list-item-action>
-              <v-icon>mdi-plus</v-icon>
+              <v-icon>fa-plus</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>Add</v-list-item-title>
+              <v-list-item-title style="fontSize: 16px">Add</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+         
           <v-divider></v-divider>
           <h4 style="textAlign: center">Genres</h4>
           <v-list-item
@@ -33,13 +36,12 @@
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
-    </v-app>
     <v-app>
       <v-app-bar app color="indigo" dark>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
         <router-link to="/">
           <v-btn text x-large>
-            <v-toolbar-title>Bookshelf Manager</v-toolbar-title>
+            <v-toolbar-title>Bookshelf Manager </v-toolbar-title>
           </v-btn>
         </router-link>
         <v-spacer></v-spacer>
@@ -78,6 +80,7 @@
           style="marginRight: 10px"
           color="indigo darken-4"
         >
+
           <h2 style="fontWeight: none">Sign up</h2>
         </v-btn>
         <v-btn
@@ -89,7 +92,7 @@
           style="marginRight: 10px"
           color="green darken-3"
         >
-          <v-icon>mdi-login</v-icon>
+             <v-icon style="padding: 5px ">fa-sign-in-alt</v-icon>
           <h2 style="fontWeight: none">Log in</h2>
         </v-btn>
         <v-btn
@@ -100,7 +103,7 @@
           style="marginRight: 10px"
           color="red darken-4"
         >
-          <v-icon>mdi-logout</v-icon>
+           <v-icon style="padding: 5px ">fa-sign-out-alt</v-icon>
           <h2 style="fontWeight: none">Log out</h2>
         </v-btn>
       </v-app-bar>
@@ -111,6 +114,7 @@
         <v-spacer></v-spacer>
       </v-footer>
     </v-app>
+  </div>
   </div>
 </template>
 
@@ -180,3 +184,5 @@ export default {
   }
 };
 </script>
+
+<style>

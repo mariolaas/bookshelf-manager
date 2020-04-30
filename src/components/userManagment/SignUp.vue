@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-layout row wrap>
-      <v-flex xs2 sm6 offset-sm3 align-center justify-center>
+    <v-layout row wrap style="margin-top: 30px">
+      <v-flex sm6 offset-sm3 align-center justify-center>
         <v-card class="elevation-12">
           <v-toolbar color="indigo">
             <v-spacer></v-spacer>
@@ -77,6 +77,9 @@ export default {
       name: ""
     };
   },
+  created() {
+    window.scrollTo(0, 0);
+  },
   methods: {
     register: function(e) {
       firebase
@@ -84,7 +87,6 @@ export default {
         .createUserWithEmailAndPassword(this.email, this.password)
         .then(
           user => {
-            alert("elo");
             this.$router.go({ path: this.$router.path });
           },
           err => {
