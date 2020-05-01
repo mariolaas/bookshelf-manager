@@ -1,0 +1,145 @@
+.navbar{
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #3f51b5;
+    color:FFF;
+    padding: 1% 0;
+    font-size: 1.2em;
+    border: 0;
+}
+
+.navbar-brand{
+    float: left;
+    min-height: 55px;
+    padding: 0 15px 5px;
+}
+
+.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,
+.navbar-inverse .navbar-nav .active a:hover	{
+    color: #FFF;
+    background-color: #3f51b5;
+}
+
+.navbar-inverse .navbar-nav li a {
+    color: #D5D5D5;
+    
+}
+
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+
+.btn{
+    font-size: 18px;
+    color: #FFF;
+    padding: 12px 22px;
+    background: #3f51b5;
+    border: 2px solid #FFF;
+}
+
+.container {
+    margin: 4% auto;
+}
+
+#icon {
+    max-width:200px;
+    margin: 1% auto;
+}
+
+footer{
+    width: 100%;
+    background-color: #3f51b5;
+    padding: 5%;
+    color: #FFF;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 25px;
+    color: #FFF;
+}
+
+.fa:hover{
+    color:#D5D5D5;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .fa{
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .carousel-caption{
+        display: none;
+    }
+    
+    #icon{
+        max-width: 150px;
+    }
+    
+    h2{
+        font-size: 1.7em;
+    }
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: #58595a;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #85878c;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+.tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.tz-gallery .thumbnail:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.tz-gallery .lightbox img {
+    border-radius: 4px 4px 0 0;
+}
+
+.tz-gallery .caption{
+    padding: 26px 30px;
+    text-align: center;
+}
+
+.tz-gallery .caption h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.tz-gallery .caption p {
+    font-size: 12px;
+    color: #7b7d7d;
+    margin: 0;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}

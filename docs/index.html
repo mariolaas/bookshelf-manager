@@ -8,103 +8,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-	
-	.navbar{
-		margin-bottom: 0;
-		border-radius: 0;
-		background-color: #3f51b5;
-		color:FFF;
-		padding: 1% 0;
-		font-size: 1.2em;
-		border: 0;
-	}
-	
-	.navbar-brand{
-		float: left;
-		min-height: 55px;
-		padding: 0 15px 5px;
-	}
-	
-	.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,
-	.navbar-inverse .navbar-nav .active a:hover	{
-		color: #FFF;
-		background-color: #3f51b5;
-	}
-	
-	.navbar-inverse .navbar-nav li a {
-		color: #D5D5D5;
-		
-	}
-	
-	.carousel-caption{
-		top: 50%;
-		transform: translateY(-50%);
-		text-transform: uppercase;
-	}
-	
-	.btn{
-		font-size: 18px;
-		color: #FFF;
-		padding: 12px 22px;
-		background: #3f51b5;
-		border: 2px solid #FFF;
-	}
-	
-	.container {
-		margin: 4% auto;
-	}
-	
-	#icon {
-		max-width:200px;
-		margin: 1% auto;
-	}
-	
-	footer{
-		width: 100%;
-		background-color: #3f51b5;
-		padding: 5%;
-		color: #FFF;
-	}
-	
-	.fa {
-		padding: 15px;
-		font-size: 25px;
-		color: #FFF;
-	}
-	
-	.fa:hover{
-		color:#D5D5D5;
-		text-decoration: none;
-	}
-	
-	@media (max-width: 900px) {
-		.fa{
-			font-size: 20px;
-			padding: 10px;
-		}
-	}
-	@media (max-width: 600px) {
-		.carousel-caption{
-			display: none;
-		}
-		
-		#icon{
-			max-width: 150px;
-		}
-		
-		h2{
-			font-size: 1.7em;
-		}
-	}
-  
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -115,6 +29,8 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#gallery">Gallery</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>				
 			</div>			
@@ -181,7 +97,20 @@
 					share opinions with other readers, and see what other think by reading their reviews and opinions.
 				</p>
 				<p>
-					The application was written in SPA technology using the vue.js framework. 
+					In a nutshell,
+					<strong>Bookshelf Manager</strong> is where book lovers call home.
+				  </p>
+				  <p>
+					It is a place where you can see what your friends are reading and vice versa.
+					You can create "bookshelves" to organize what
+					you've read (or want to read). You can comment on each other's reviews.
+					You can find your next favorite book. And on this journey with your
+					friends you can explore new territory, gather information, and expand
+					your mind.
+				  </p>
+				  <p><em>Knowledge is power, and power is best shared among readers.</em></p>
+				<p>
+					The application was written in <strong>SPA technology</strong> using the vue.js framework. 
 					The visual page was created with vutefiy.
 					Firebase is responsible for the backend page, with which users can create accounts 
 					and also share data on books using Firestore.
@@ -192,20 +121,215 @@
 			</div>
 		</div>
 	</div>
-	<footer class="container-fluid text-center" id="contact">
-        <h3>Contact Us</h3><br>
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
-                <h4>Marek Daria <a href="https://github.com/maladiex3/bookshelf-manager" class="fa fa-github"></a></h4> 
-            </div>
-            <div class="col-sm-4">
-                <h4>Nowakowski Michał <a href="https://github.com/michalnow/bookshelf-manager" class="fa fa-github"></a></h4>
-            </div>
-            <div class="col-sm-4">
-                <h4>Sosnowska Mariola <a href="https://github.com/mariolaas/bookshelf-manager" class="fa fa-github"></a></h4>
-            </div>
+				<h3 style="color: #3f51b5; text-align: center; font-weight: bold;">Free to use<span class="glyphicon glyphicon-usd"></span></h3>
+				<p style="text-align: center;">Our app requires no payments. Sign in and use without any additional fees and charges.</p>
+			</div>
+			<div class="col-sm-4">
+				<h3 style="color: #3f51b5; text-align: center; font-weight: bold;">No Ads <span class="glyphicon glyphicon-check"></span></h3>
+				<p style="text-align: center;">Experience the convenient interface of our ad-free application.
+					Enjoy full access to your bookshelf without any interruptions.</p>
+			</div>
+			<div class="col-sm-4">
+				<h3 style="color: #3f51b5; text-align: center; font-weight: bold;">Responsive<span class="glyphicon glyphicon-phone"></span></h3>
+				<p style="text-align: center;">Use your bookshelf whenever you want and from what device you want.
+					The application is fully adapted to mobile devices and desktops.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container" id="features">
+		<h4 style="color: #3f51b5;"><a href="#hidden" data-toggle="collapse">What are the most important features of our app?</a></h4>
+		<div class="row">
+			<div id="hidden" class="collapse">
+					<ul>
+						<li>Build and update your profile:</li>
+						<ul>
+							<li>Register</li>
+							<li>Sign in</li>
+							<li>Log out</li>
+						</ul>
+						<li>Create your shelves and your wish list:</li>
+						<ul>
+							<li>Add books to "bookshelf"</li>
+							<li>Change status to:</li>
+							<ul>
+								<li>Reading</li>
+								<li>Want to read</li>
+							</ul>
+							<li>Search via genre</li>
+						</ul>
+						<li>Track the books you're reading and want to read.</li>
+						<li>Review and rate books that you read:</li>
+						<ul>
+							<li>Add comments</li>
+							<li>Add rates</li>
+							<li>Add to favourites</li>
+						</ul>
+						<li>Check out your personalized book recommendations:</li>
+						<ul>
+							<li>Find a book for you from the recommended books</li>
+							<li>Find the book from all books</li>
+						</ul>
+						<li>Find out if a book is a good fit for you from our community’s reviews.</li>
+						<li>Expand the list of all books.</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container gallery-container" id="gallery">
+		<h2>Bookshelf Manager Gallery</h2>
+		<div class="tz-gallery">
+			<div class="row">
+	
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/login-desktop.png">
+							<img src="img/screens/login-desktop.png" alt="Login panel">
+						</a>
+						<div class="caption">
+							<h3>Login panel</h3>
+							<p>You can create your own account and log in using your email and password.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/main-view-desktop.png">
+							<img src="img/screens/main-view-desktop.png" alt="Main view">
+						</a>
+						<div class="caption">
+							<h3>Main view</h3>
+							<p>After logging in to the application you will see a list of the most popular books,
+								and you will also receive recommendations for books to read.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/all-books-desktop.png">
+							<img src="img/screens/all-books-desktop.png" alt="All books">
+						</a>
+						<div class="caption">
+							<h3>All books</h3>
+							<p>From the view of all books, you can search for books using the search engine,
+								and add them to "Bookshelf" using a special icon.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/book-view-desktop.png">
+							<img src="img/screens/book-view-desktop.png" alt="Book view">
+						</a>
+						<div class="caption">
+							<h3>Book view</h3>
+							<p>By clicking on the selected book you will receive information about its author, publication date,
+								number of pages, cover picture, as well as a description of the book.
+								Here you will also see a review of other users, and you can add your own comments and likes.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/add-books-desktop.png">
+							<img src="img/screens/add-books-desktop.png" alt="Add new Book">
+						</a>
+						<div class="caption">
+							<h3>Add new Book</h3>
+							<p>The application also allows you to add new books.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/user-view-desktop.png">
+							<img src="img/screens/user-view-desktop.png" alt="User account">
+						</a>
+						<div class="caption">
+							<h3>User account</h3>
+							<p>Going to the user account you will see three tabs: Bookshelf, Want to read and Reading. 
+								After expanding them, you will receive a list of books that you have added to Bookshelf. 
+								From here, you can transfer them to the Want to read and Reading list using special icons.
+								You can rate books on the Reading list.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/other-user-desktop.png">
+							<img src="img/screens/other-user-desktop.png" alt="Accounts of other user">
+						</a>
+						<div class="caption">
+							<h3>Accounts of other users</h3>
+							<p>You can browse other users' book lists and discover new books.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/about-desktop.png">
+							<img src="img/screens/about-desktop.png" alt="About subpage">
+						</a>
+						<div class="caption">
+							<h3>About subpage</h3>
+							<p>A description of the application and its most important functionalities is available on the About subpage.
+								Here you can also check the number of reviews and books added in the application.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a class="lightbox" href="img/screens/business-books.png">
+							<img src="img/screens/business-books.png" alt="Book genres">
+						</a>
+						<div class="caption">
+							<h3>Book genres</h3>
+							<p>By choosing a specific genre from the menu you will receive a list of books of that genre.
+								The photo shows an example of books from the genre of "Business".</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		</div>
+	
+	</div>
+	<footer class="container-fluid text-center" id="contact">
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>Contact Us</h3>
+				<br>
+				<div class="col-sm-4">
+				<h4>Marek Daria <a href="https://github.com/maladiex3/bookshelf-manager" class="fa fa-github"></a></h4> 
+				</div>
+				<div class="col-sm-4">
+				<h4>Nowakowski Michał <a href="https://github.com/michalnow/bookshelf-manager" class="fa fa-github"></a></h4>
+				</div>
+				<div class="col-sm-4">
+				<h4>Sosnowska Mariola <a href="https://github.com/mariolaas/bookshelf-manager" class="fa fa-github"></a></h4>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<h3>Resources</h3>
+				<br>
+				<div class="col-sm-4">
+					<h4>App <a href="#" class="fa fa-github"></a></h4> 
+				</div>
+				<div class="col-sm-4">
+					<h4>Repository <a href="https://github.com/michalnow/bookshelf-manager" class="fa fa-github"></a></h4>
+				</div>
+				<div class="col-sm-4">
+					<h4>Project <a href="https://github.com/michalnow/bookshelf-manager/projects/2" class="fa fa-github"></a></h4>
+				</div>
 			</div>
 		</div>
 	</footer>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+	<script>
+		baguetteBox.run('.tz-gallery');
+	</script>
 </body>
 </html>
